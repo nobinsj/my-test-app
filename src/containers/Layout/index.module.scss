@@ -1,0 +1,60 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.layout {
+  @include flex-column;
+  justify-content: space-between;
+  height: 100vh;
+  overflow: hidden;
+  color: var(--tertiary);
+  font-family: var(--default);
+
+  &__header {
+    @include flex-column;
+    justify-content: space-evenly;
+    justify-content: center;
+
+    &__main-header {
+      height: 53px;
+      padding: 0rem 1.334rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__logo {
+        height: 40px;
+        width: 80px;
+      }
+
+      &__location {
+        height: 50px;
+        padding-top: 5px;
+        @include flex-column;
+
+        >label {
+          align-self: center;
+          font-size: 0.889rem;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &__order-history {
+        height: 28px;
+        width: 25px;
+      }
+    }
+  }
+
+  >main {
+    flex-grow: 1;
+  }
+
+  &__footer {
+    background-color: var(--secondary);
+    height: 50px;
+  }
+}

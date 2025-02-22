@@ -1,0 +1,15 @@
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.food {
+    @include flex-column;
+    max-width: 550px;
+    height: calc(100vh - 53px);
+    font-family: var(--default);
+    background: var(--secondary);
+    margin: 0 auto;
+    overflow: auto;
+
+}

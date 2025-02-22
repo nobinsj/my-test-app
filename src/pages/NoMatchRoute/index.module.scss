@@ -1,0 +1,16 @@
+.pageNotFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  height: 100%;
+
+  &__container {
+    text-align: center;
+
+    &__title {
+      font-size: 2.5em;
+      margin-bottom: 2vh;
+    }
+  }
+}

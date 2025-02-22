@@ -1,0 +1,15 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.home {
+  @include flex-column;
+  width: 360px;
+  background: var(--primary);
+  font-family: var(--default);
+  color: var(--tertiary);
+  margin: 0 auto;
+  overflow: auto;
+
+}
